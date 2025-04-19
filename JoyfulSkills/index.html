@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JoyfulSkills Mini Demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+   body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  background: #FFFAF0;
+  color: #333;
+  overflow-x: hidden;
+}
+header, footer {
+  padding: 20px;
+  text-align: center;
+  background: #FF8C8C;
+  color: white;
+}
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+.cta-btn {
+  background: #FFD700;
+  color: #333;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.cta-btn:hover {
+  background: #FFA500;
+  color: #fff;
+}
+.playstore-badge img {
+  width: 150px;
+}
+.doodle {
+  width: 80px;
+  position: absolute;
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-15px);}
+}
+.light-mode { background: #FFFAF0; color: #333; }
+.dark-mode { background: #0f0e0e; color: #FFFAF0; }
+.mode-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  z-index: 1000;
+}
+iframe {
+  width: 90%;
+  height: 300px;
+  border: 0;
+  margin: 20px 0;
+}
+.about {
+  max-width: 600px;
+  margin: auto;
+}
+footer p {
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FF8C8C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: white;
+  font-size: 1.5rem;
+}
+.hidden { display: none; }
+
+/* 📱 Mobile styles */
+@media (max-width: 600px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  section { padding: 30px 10px; }
+  .cta-btn { padding: 10px 20px; font-size: 0.9rem; }
+  .playstore-badge img { width: 120px; }
+  iframe { height: 200px; }
+  .doodle { width: 50px; }
+  .mode-toggle { font-size: 1.2rem; top: 10px; right: 15px; }
+}
+
+/* 📱 Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  section { padding: 40px 20px; }
+  .cta-btn { padding: 12px 22px; font-size: 1rem; }
+  .playstore-badge img { width: 140px; }
+  iframe { height: 250px; }
+  .doodle { width: 65px; }
+  .mode-toggle { font-size: 1.3rem; top: 12px; right: 18px; }
+}
+
+/* 🖥️ Desktop styles (default already set) */
+
+  </style>
+</head>
+<body>
+
+<div class="loading" id="loading">Loading JoyfulSkills...</div>
+
+<div class="mode-toggle" onclick="toggleMode()"><i class="fas fa-adjust"></i></div>
+
+<header>
+  <h1>JoyfulSkills Demo</h1>
+  <nav>
+    <a href="about.html" style="color: white; text-decoration: none; margin-left: 15px;">About Us</a>
+  </nav>
+  
+</header>
+
+<section data-aos="fade-up">
+  <h2>Google Reviews</h2>
+  <div class='sk-ww-google-reviews' data-embed-id='25547424'></div><script src='https://widgets.sociablekit.com/google-reviews/widget.js' defer></script>
+</section>
+
+
+<section data-aos="fade-up">
+  <h2>Instagram Feed</h2>
+  <!-- <iframe src="https://snapwidget.com/embed/1034270" style="border:none;overflow:hidden;"></iframe> -->
+  <div class='sk-ww-instagram-hashtag-feed' data-embed-id='25548061'></div><script src='https://widgets.sociablekit.com/instagram-hashtag-feed/widget.js' defer></script>
+</section>
+
+<section data-aos="fade-up">
+  <h2>Download Our App</h2>
+  <div class="playstore-badge">
+    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store"></a>
+  </div>
+</section>
+
+<section class="about" data-aos="fade-up">
+  <h2>Why Us?</h2>
+  <p>At JoyfulSkills, we bring creativity and joy into every project. We combine doodle-inspired designs, responsive layouts, and interactive animations to create experiences people love.</p>
+  <a href="https://refiningskills.org/" class="cta-btn">Book a Demo</a>
+</section>
+
+<footer>
+  <p>&copy; 2024 JoyfulSkills. All rights reserved.</p>
+</footer>
+
+<img src="https://static.vecteezy.com/system/resources/previews/015/153/119/non_2x/watercolor-clouds-shape-transparent-hand-drawn-cloud-free-png.png" class="doodle" style="top: 10%; left: 5%;">
+<img src="https://static.vecteezy.com/system/resources/previews/015/153/119/non_2x/watercolor-clouds-shape-transparent-hand-drawn-cloud-free-png.png" class="doodle" style="top: 80%; left: 80%; animation-delay: 2s;">
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  window.onload = () => document.getElementById('loading').classList.add('hidden');
+  function toggleMode() {
+    document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('light-mode');
+  }
+</script>
+
+
+
+</body>
+</html>
